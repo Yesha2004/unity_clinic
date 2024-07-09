@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="appointment-form-container">
+        <h1>Appointment Form</h1>
+        <p>If you would like to arrange for a consultation appointment, please fill out this Appointment Form and we will get back to you as soon as possible.</p>
+        <form id="appointmentForm">
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" id="appointmentDate" required>
+
+            <label for="appointmentTime">Appointment Time</label>
+            <div class="toggle-buttons">
+                <button type="button" class="toggle-button" data-time="9:00 AM">9:00 AM</button>
+                <button type="button" class="toggle-button" data-time="12:00 PM">12:00 PM</button>
+                <button type="button" class="toggle-button" data-time="3:00 PM">3:00 PM</button>
+                <input type="hidden" id="appointmentTime" name="appointmentTime" required>
+            </div>
+
+            <label for="firstName">Name</label>
+            <div class="name-fields">
+                <input type="text" id="firstName" placeholder="First" required>
+                <input type="text" id="lastName" placeholder="Last" required>
+            </div>
+
+            <label for="address">Address</label>
+            <input type="text" id="streetAddress" placeholder="Street Address" required>
+            <input type="text" id="streetAddress2" placeholder="Street Address Line 2">
+            <div class="address-fields">
+                <input type="text" id="city" placeholder="City" required>
+            </div>
+
+            <label for="specialist">Specialist</label>
+            <select id="specialist" required>
+                <option value="" disabled selected>Select a Specialist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Neurologist">Neurologist</option>
+                <option value="Radiologist">Radiologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Orthopedist">Orthopedist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Hematologist">Hematologist</option>
+            </select>
+
+            <button type="submit">Send Appointment Form</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
